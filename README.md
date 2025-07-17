@@ -33,8 +33,6 @@ PastureParameterEstimation/
 # Dataset Overview
 
 - Source: A dataset for pasture parameter estimation based on satellite remote sensing and weather variables
-Link: https://www.sciencedirect.com/science/article/pii/S235234092400177X
-
 
 
 # Descriptive Analytics Highlights
