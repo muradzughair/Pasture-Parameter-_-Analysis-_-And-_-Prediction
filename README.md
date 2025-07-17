@@ -29,110 +29,68 @@ PastureParameterEstimation/
 ├── README.md
 └── requirements.txt
 ```
-Dataset Overview
-Source: Satellite remote sensing + weather + field-measured forage data
 
-Features include:
+# Dataset Overview
 
-Biomass (kg/ha)
+- Source: A dataset for pasture parameter estimation based on satellite remote sensing and weather variables
+Link: https://www.sciencedirect.com/science/article/pii/S235234092400177X
 
-Vegetation indices (e.g., SAVI)
 
-Weather parameters (Temperature, Rainfall, Wind, Solar Radiation, etc.)
 
-Forage quality metrics: NDF, ADF, Crude Protein
+# Descriptive Analytics Highlights
 
-Grazing activity (animal presence)
+## Biomass Distribution
 
-Target variables: Biomass, forage quality indicators (CP, NDF, ADF)
+- Mean: ~4302 kg/ha; Median: ~3190 kg/ha → indicates right-skewed distribution.
 
-📊 Descriptive Analytics Highlights
-Biomass Distribution
+- Grazed areas showed consistently lower biomass values.
 
-Mean: ~4302 kg/ha; Median: ~3190 kg/ha → indicates right-skewed distribution.
+- Spatial Analysis
 
-Grazed areas showed consistently lower biomass values.
+- Scatter plots show non-uniform biomass distribution due to environmental and grazing effects.
 
-Spatial Analysis
+- High SAVI correlates with high biomass → healthy vegetation = better forage.
 
-Scatter plots show non-uniform biomass distribution due to environmental and grazing effects.
+## Impact of Environmental Factors
 
-High SAVI correlates with high biomass → healthy vegetation = better forage.
+- SAVI: Strong positive correlation with biomass.
 
-Impact of Environmental Factors
+- Evapotranspiration (EVAPOT): Negative correlation → high water loss reduces productivity.
 
-SAVI: Strong positive correlation with biomass
+- Radiative Direct Avg: Weak correlation with biomass.
 
-Evapotranspiration (EVAPOT): Negative correlation → high water loss reduces productivity
-
-Radiative Direct Avg: Weak correlation with biomass
-
-Grazing Impact
-
-Grazed paddocks showed lower biomass vs. ungrazed (S1, S2)
-
-Suggests overgrazing reduces growth → rotational grazing recommended
-
-Forage Quality Insights
-
-Low NDF/ADF and high CP = high-quality forage
-
-Best forage observed under:
-
-Low rainfall (2–3 mm)
-
-Moderate temperatures (~30–32°C)
-
-Moderate wind speed (9–15 m/s)
-
-🤖 Predictive Modeling Summary
+# Predictive Modeling Summary
 Preprocessing
 
-Handled datetime conversion
+- Handled datetime conversion
 
-Applied one-hot encoding for categorical variables
+- Applied one-hot encoding for categorical variables
 
-Used SelectKBest and RFE for feature selection
+- Used SelectKBest and RFE for feature selection
 
-Models Implemented
+- Models Implemented
 
-Linear Regression
+- Linear Regression
 
-Decision Tree Regressor
+- Decision Tree Regressor
 
-Exponential Smoothing (time series)
+- Exponential Smoothing (time series)
 
-LSTM (Neural Network for sequence learning)
+- LSTM (Neural Network for sequence learning)
 
-Results Summary
 
-Model	R² Score	MAE	Notes
-Linear Regression	~0.65	Moderate	Simple, consistent across splits
-Decision Tree	~0.82	Lower	High variance across random splits
-Exponential Smoothing	1.00	0	Excellent fit (trend-based)
-LSTM	0.77	~883	Strong temporal modeling
-
-📈 Key Insights for Decision-Making
-Data analytics supports grazing strategy optimization (e.g., identify overgrazed areas).
-
-Environmental conditions can guide planting and irrigation decisions for higher forage quality.
-
-Biomass prediction models help farmers plan livestock feeding and pasture rotation effectively.
-
-Visualizations (heatmaps, scatter plots, box plots) allow intuitive understanding of complex environmental relationships.
-
-🛠️ Tools & Technologies
+# Tools & Technologies
 Python
 
-pandas, NumPy
+- pandas, NumPy
 
-scikit-learn, seaborn, matplotlib
+- scikit-learn, seaborn, matplotlib
 
-Keras (for LSTM)
+- Keras (for LSTM)
 
-statsmodels (for smoothing)
+- statsmodels (for smoothing)
 
-📎 Citation (Dataset Source)
+# Citation (Dataset Source)
 Jiménez-Muñoz, Estelí et al. “A dataset for pasture parameter estimation based on satellite remote sensing and weather variables.” Data in Brief (2024).
 https://doi.org/10.1016/j.dib.2024.110634
 
