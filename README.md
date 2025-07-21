@@ -21,10 +21,10 @@ The goal of this project is to analyze biomass and forage quality in pasture env
 PastureParameterEstimation/
 │
 ├── data/
-│   └── Complete_Dataset_updated.csv      # Dataset sourced from research paper
+│   └── Complete_Dataset_updated.csv      
 │
-├── 1_Descriptive_Pasture_Analysis.ipynb  # Visualization, correlation, forage quality analysis
-├── 2_Predictive_Pasture_Modeling.ipynb   # ML modeling: Linear Regression, Decision Tree, LSTM
+├── 1_Descriptive_Pasture_Analysis.ipynb 
+├── 2_Predictive_Pasture_Modeling.ipynb  
 │
 ├── README.md
 └── requirements.txt
